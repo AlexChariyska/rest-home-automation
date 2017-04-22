@@ -1,0 +1,69 @@
+<div class="columns">
+  <div class="column">
+
+    <form class="custom-form">
+      <div class="control is-horizontal">
+              <div class="control-label">
+                  <label class="label" for="animation">Staircase mode</label>
+              </div>
+              <div class="control">
+                <span class="select">
+                  <select id="mode">
+                    {{#each workModes}}
+                        <option value="{{this}}" {{#equal this ../workMode}}selected{{/equal}}>{{this}}</option>
+                    {{/each}}
+                  </select>
+                </span>
+              </div>
+          </div>
+
+      <div class="control is-horizontal">
+        <div class="control-label">
+          <label class="label" for="animation">Animation type</label>
+        </div>
+        <div class="control">
+          <span class="select">
+            <select id="animation">
+              {{#each animationModes}}
+                  <option value="{{this}}"
+                          {{#equal this ../animationMode}}selected{{/equal}}>{{this}}</option>
+              {{/each}}
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <div class="control is-horizontal">
+        <div class="control-label">
+          <label class="label" for="animation">Color</label>
+        </div>
+
+        <div class="control has-icon">
+          <input class="input" id="color" type="color" value={{color}} placeholder="Color">
+          <i class="fa fa-lightbulb-o"></i>
+        </div>
+      </div>
+
+      <div class="control is-horizontal">
+        <div class="control-label">
+          <label class="label" for="direction">Direction</label>
+        </div>
+        <div class="control">
+          <span class="select">
+            <select id="direction">
+              {{#each directions}}
+                  <option value="{{this}}"
+                          {{#equal this ../direction}}selected{{/equal}}>{{this}}</option>
+              {{/each}}
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <div class="is-flex justify-content-end">
+        <button id='submit' class="button is-primary">Submit</button>
+      </div>
+    </form>
+
+  </div>
+</div>
